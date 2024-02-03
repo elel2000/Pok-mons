@@ -1,3 +1,5 @@
+const pokeStack = document.getElementById("pokeStack");
+
 const fetchPoke = () => {
     const promises = [];
     for(let i = 1 ; i <= 150 ; i++)
@@ -19,5 +21,14 @@ const fetchPoke = () => {
 
 function displayPoke(poke){
     console.log(poke);
+    const pokemonHTML = poke.map((pokes) => {
+        return `<li class="w3-card-4">
+            <img src="${pokes.image}" />
+            <h3> ${pokes.name} </h3>
+            <p> Type: ${pokes.type} </p><br/>
+        </li>`
+    })
+    console.log (pokemonHTML);
+    pokeStack.innerHTML = pokemonHTML.join('');
 }
 fetchPoke();
