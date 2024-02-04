@@ -1,4 +1,4 @@
-const pokeStack = document.getElementById("pokeStack");
+const pokeStack = document.getElementById("basic-grid");
 
 const fetchPoke = () => {
     const promises = [];
@@ -22,11 +22,11 @@ const fetchPoke = () => {
 function displayPoke(poke){
     console.log(poke);
     const pokemonHTML = poke.map((pokes) => {
-        return `<li class="w3-card-4">
+        return `<div class="card">
             <img src="${pokes.image}" />
-            <h3> ${pokes.name} </h3>
+            <h3> ${pokes.id}. ${pokes.name} </h3>
             <p> Type: ${pokes.type} </p><br/>
-        </li>`
+        </div>`
     })
     console.log (pokemonHTML);
     pokeStack.innerHTML = pokemonHTML.join('');
