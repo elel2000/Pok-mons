@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 
+.container {
+    text-align: center;
+}
+.content {
+    display: inline-block;
+    text-align: left;
+    font-size: 3rem;
+}
+.content img {
+    vertical-align: middle;
+    margin-left: 10px; 
+}
+
 body {
     background: rgb(203, 3, 3);
     color: #fff;
